@@ -1,0 +1,4 @@
+# Open Serve
+ng serve --open
+# Build App
+ng build --prod
