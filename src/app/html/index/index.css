@@ -8,7 +8,7 @@ header.masthead {
     text-align: center;
     color: #fff;
     background-color: #09355C;
-    background-image: url(../assets/img/833.png);
+    background-image: url(../../../assets/img/833.png);
 }
 .btn-primary {
     color: #fff;
@@ -20,18 +20,12 @@ header.masthead {
     background-color:#275782;
     border-color: #112e48;
 }
-footer .footer-mailchimp {
-    padding: 50px 0;
-    color: #fff;
-    background-color: #09355C;
-    background-image: url(../assets/img/833.png);
-}
 .p-t-35px{
     padding-top: 35px;
 }
 .page-heading {
     background-color: #09355C;
-    background-image: url(../assets/img/833.png);
+    background-image: url(../../../assets/img/833.png);
 }
 .modal-header {
     display: block;
