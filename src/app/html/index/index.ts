@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 
 export class IndexComponent {
-  title = 'Theme';
+
+    constructor(
+
+    ) {
+
+     }
 }
