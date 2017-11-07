@@ -1,0 +1,46 @@
+a {
+    color: #09355C;
+    text-decoration: none;
+    -webkit-text-decoration-skip: objects;
+}
+header.masthead {
+    padding: 75px 0;
+    text-align: center;
+    color: #fff;
+    background-color: #09355C;
+    background-image: url(../assets/img/833.png);
+}
+.btn-primary {
+    color: #fff;
+    background-color: #09355C;
+    border-color: #112e48;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color:#275782;
+    border-color: #112e48;
+}
+footer .footer-mailchimp {
+    padding: 50px 0;
+    color: #fff;
+    background-color: #09355C;
+    background-image: url(../assets/img/833.png);
+}
+.p-t-35px{
+    padding-top: 35px;
+}
+.page-heading {
+    background-color: #09355C;
+    background-image: url(../assets/img/833.png);
+}
+.modal-header {
+    display: block;
+}
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 18px;
+}
+.contac-num{
+    margin-right: 25px;
+}
