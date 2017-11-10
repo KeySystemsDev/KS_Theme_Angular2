@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-index',
   templateUrl: './index.html',
   styleUrls: ['./index.css'],
 })
@@ -13,4 +13,5 @@ export class IndexComponent {
     ) {
 
      }
+     
 }
