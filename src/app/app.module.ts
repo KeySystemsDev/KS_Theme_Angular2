@@ -1,12 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
+// Rutas
+import { app_routing } from "./app.routes";
+
+// HTML
 import { AppComponent } from './app.component';
 import { IndexComponent } from './html/index/index';
 import { ListComponent } from './html/list/list';
 import { DetailComponent } from './html/detail/detail';
 
+// Componentes
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -21,11 +25,7 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      { path: 'index', component: IndexComponent},
-      { path: 'list', component: ListComponent},
-      { path: 'detail', component: DetailComponent},
-    ])
+    app_routing
   ],
   providers: [],
   bootstrap: [AppComponent]
