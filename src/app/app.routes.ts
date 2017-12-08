@@ -10,7 +10,7 @@ import {
 const app_routes: Routes = [
     { path: 'index', component: IndexComponent},
     { path: 'list', component: ListComponent},
-    { path: 'detail', component: DetailComponent},
+    { path: 'detail/:id', component: DetailComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'index' }
 ];
 

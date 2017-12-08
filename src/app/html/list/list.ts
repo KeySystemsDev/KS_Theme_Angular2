@@ -16,7 +16,7 @@ export class ListComponent {
                 
                 ) {
                     
-                    this.http.get('https://paginaswebks.com/ks/paginaswebks.com/wp-json/wp/v2/temas')
+                    this.http.get('https://paginaswebks.com/wp-json/wp/v2/temas')
                     .subscribe( 
                         data => {
                             this.themes = data.json();
