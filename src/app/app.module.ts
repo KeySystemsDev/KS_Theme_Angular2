@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from "@angular/http";
 import { LoadingModule } from 'ngx-loading';
+import { ModalModule } from 'ngx-modialog';
+import { BootstrapModalModule, Modal, bootstrap4Mode } from 'ngx-modialog/plugins/bootstrap';
 
 // Rutas
 import { app_routing } from "./app.routes";
@@ -29,7 +31,9 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     HttpModule,
     app_routing,
-    LoadingModule
+    LoadingModule,
+    ModalModule.forRoot(),
+    BootstrapModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

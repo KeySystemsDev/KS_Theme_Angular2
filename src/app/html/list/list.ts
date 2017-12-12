@@ -21,7 +21,7 @@ export class ListComponent {
                     .subscribe( 
                         data => {
                             this.themes = data.json();
-                            console.log(this.themes);
+                            //console.log(this.themes);
                             this.loading = false;
                         },
                         err => {
