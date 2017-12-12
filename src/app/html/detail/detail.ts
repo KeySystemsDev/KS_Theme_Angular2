@@ -59,21 +59,38 @@ export class DetailComponent {
         const dialogRef = this.modal.alert()
             .size('lg')
             .showClose(true)
-            .title('A simple Alert style modal window')
+            .title('Contactanos')
             .body(`
-                <h4>Alert is a classic (title/body/footer) 1 button modal window that 
-                does not block.</h4>
-                <b>Configuration:</b>
-                <ul>
-                    <li>Non blocking (click anywhere outside to dismiss)</li>
-                    <li>Size large</li>
-                    <li>Dismissed with default keyboard key (ESC)</li>
-                    <li>Close wth button click</li>
-                    <li>HTML content</li>
-                </ul>`)
+
+                <div class="card-body">
+                    <h4>Temas auto administrables</h4>
+                    <p>Si desea obtener uno de nuestros temas autoadministrable debe ponerse en contacto con nosotros a través de los siguientes medios.</p>
+                    <p>Los precios y condiciones pueden variar según sus necesidades, uno de nuestros asesores le dará toda la información requerida para su proyecto. </p>
+                </div>
+                </div>
+                <div class="card sb-card download-links">
+                <div class="card-body">
+                    <h4>Contactos</h4>
+                    <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="tel:+584142667519" class="btn btn-secondary"><i class="fa fa-phone" aria-hidden="true"></i> +58 414 26 67 519 </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="tel:+584125568831" class="btn btn-secondary"><i class="fa fa-whatsapp" aria-hidden="true" style="color:#51c95d;"></i> +58 412 55 68 831 </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="tel:+56982565380" class="btn btn-secondary"><i class="fa fa-whatsapp" aria-hidden="true" style="color:#51c95d;"></i> +56 982 56 53 80 </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="malito:info@keysystemsca.com" class="btn btn-secondary"><i class="fa fa-envelope-o" aria-hidden="true" style="color:red;"></i> info@keysystemsca.com </a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+                
+                `)
             .open();
 
-        dialogRef.result
-            .then( result => alert(`The result is: ${result}`) );
+      
     }
 }

@@ -2,3 +2,16 @@
 p {
     margin-bottom: 0px!important;
 }
+.modal-header .close {
+    margin-left: 0px!important;
+}
+.modal-title {
+    font-size: 18px;
+    margin-left: 20px;
+}
+.modal-header {
+    justify-content: left!important;
+}
+.modal-footer {
+    display: none!important;
+    }
