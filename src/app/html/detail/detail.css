@@ -1,5 +1,5 @@
 a {
-    color: #09355C;
+    color: #212121;
     text-decoration: none;
     -webkit-text-decoration-skip: objects;
 }
@@ -37,4 +37,11 @@ header.masthead {
 }
 .contac-num{
     margin-right: 25px;
+}
+.text-2-line{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 20px;
 }

@@ -1,4 +1,4 @@
-<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '0px' }"></ngx-loading>
 
 <header class="page-heading">
   <div class="container"> 
@@ -34,11 +34,11 @@
     <div class="col-lg-4 col-md-6 sb-preview text-center" *ngFor="let theme of themes">
       <div class="card h-100">
         <a class="sb-preview-img" [routerLink]="['/detail', theme.id]">
-          <img class="card-img-top" src="assets/img/gopro.png" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
+          <img class="card-img-top" src="{{theme.acf.portada}}" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
         </a>
         <div class="card-body">
           <h4 class="card-title">{{theme.title.rendered}}</h4>
-          <p class="card-text">An app landing page theme.</p>
+          <div [innerHTML]="theme.acf.resumen" class="text-2-line"></div>
         </div>
         <div class="card-footer">
           <a [routerLink]="['/detail', theme.id]" class="btn btn-secondary">Demo &amp; Descarga</a>
