@@ -10,7 +10,9 @@ import { Http } from '@angular/http';
 export class IndexComponent {
     
   themes:any[] = [];
+  themes2:any[] = [];
   public loading = false;
+  public someArray = [1, 2, 3, 4, 5];
 
     constructor(
 
@@ -22,8 +24,8 @@ export class IndexComponent {
             this.http.get('https://paginaswebks.com/wp-json/wp/v2/temas')
             .subscribe( 
               data => {
-                  this.themes = data.json();
-                  console.log(this.themes);
+                  this.themes = data.json().sort(() => Math.random() * 2 - 1);
+                  this.themes2 = data.json().sort(() => Math.random() * 2 - 1);
                   this.loading = false;
               },
               err => {
