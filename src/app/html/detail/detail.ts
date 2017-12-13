@@ -29,6 +29,7 @@ export class DetailComponent {
                     public modal: Modal
                 
                 ) { 
+                    window.scrollTo(0, 0);
                     this.loading = true;
 
                     this.sub = this.route.params.subscribe(params => {

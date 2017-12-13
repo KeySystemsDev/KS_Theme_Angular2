@@ -1,3 +1,5 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '0px' }"></ngx-loading>
+
 <header class="masthead">
   <div class="container-fluid">
     <div class="masthead-brand">Themas KS</div>
@@ -29,87 +31,17 @@
 <section class="themes">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 col-md-6 sb-preview text-center">
+      <div class="col-lg-4 col-md-6 sb-preview text-center" *ngFor="let theme of themes">
         <div class="card h-100">
-          <a class="sb-preview-img" routerLink="/detail">
-            <img class="card-img-top" src="assets/img/gopro.png" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
+          <a class="sb-preview-img" [routerLink]="['/detail', theme.id]">
+            <img class="card-img-top" src="{{theme.acf.portada}}" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
           </a>
           <div class="card-body">
-            <h4 class="card-title">Go Pro</h4>
-            <p class="card-text">An app landing page theme.</p>
+            <h4 class="card-title">{{theme.title.rendered}}</h4>
+            <div [innerHTML]="theme.acf.resumen" class="text-2-line"></div>
           </div>
           <div class="card-footer">
-            <a routerLink="/detail" class="btn btn-secondary">Demo &amp; Descarga</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 sb-preview text-center">
-        <div class="card h-100">
-          <a class="sb-preview-img" routerLink="/detail">
-            <img class="card-img-top" src="assets/img/gopro.png" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
-          </a>
-          <div class="card-body">
-            <h4 class="card-title">Go Pro</h4>
-            <p class="card-text">An app landing page theme.</p>
-          </div>
-          <div class="card-footer">
-            <a routerLink="/detail" class="btn btn-secondary">Demo &amp; Descarga</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 sb-preview text-center">
-        <div class="card h-100">
-          <a class="sb-preview-img" routerLink="/detail">
-            <img class="card-img-top" src="assets/img/gopro.png" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
-          </a>
-          <div class="card-body">
-            <h4 class="card-title">Go Pro</h4>
-            <p class="card-text">An app landing page theme.</p>
-          </div>
-          <div class="card-footer">
-            <a routerLink="/detail" class="btn btn-secondary">Demo &amp; Descarga</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 sb-preview text-center">
-        <div class="card h-100">
-          <a class="sb-preview-img" routerLink="/detail">
-            <img class="card-img-top" src="assets/img/gopro.png" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
-          </a>
-          <div class="card-body">
-            <h4 class="card-title">Go Pro</h4>
-            <p class="card-text">An app landing page theme.</p>
-          </div>
-          <div class="card-footer">
-            <a routerLink="/detail" class="btn btn-secondary">Demo &amp; Descarga</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 sb-preview text-center">
-        <div class="card h-100">
-          <a class="sb-preview-img" routerLink="/detail">
-            <img class="card-img-top" src="assets/img/gopro.png" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
-          </a>
-          <div class="card-body">
-            <h4 class="card-title">Go Pro</h4>
-            <p class="card-text">An app landing page theme.</p>
-          </div>
-          <div class="card-footer">
-            <a routerLink="/detail" class="btn btn-secondary">Demo &amp; Descarga</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 sb-preview text-center">
-        <div class="card h-100">
-          <a class="sb-preview-img" routerLink="/detail">
-            <img class="card-img-top" src="assets/img/gopro.png" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
-          </a>
-          <div class="card-body">
-            <h4 class="card-title">Go Pro</h4>
-            <p class="card-text">An app landing page theme.</p>
-          </div>
-          <div class="card-footer">
-            <a routerLink="/detail" class="btn btn-secondary">Demo &amp; Descarga</a>
+            <a [routerLink]="['/detail', theme.id]" class="btn btn-secondary">Demo &amp; Descarga</a>
           </div>
         </div>
       </div>
@@ -130,48 +62,21 @@
       <div class="col-lg-8 mx-auto">
         <h2>Temas Auto-administrables</h2>
         <p class="lead">Desesas que tu tema sea autoadministrable ponte en <a routerLink="/detail">contacto</a> con nosotros y averigua como obtener un tema que puedas gestionar tu mismo.</p>
+        <br><br>
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4 col-md-6 sb-preview text-center">
+      <div class="col-lg-4 col-md-6 sb-preview text-center" *ngFor="let theme of themes">
         <div class="card h-100">
-          <a class="sb-preview-img" routerLink="/detail">
-            <img class="card-img-top" src="assets/img/gopro.png" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
+          <a class="sb-preview-img" [routerLink]="['/detail', theme.id]">
+            <img class="card-img-top" src="{{theme.acf.portada}}" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
           </a>
           <div class="card-body">
-            <h4 class="card-title">Go Pro</h4>
-            <p class="card-text">An app landing page theme.</p>
+            <h4 class="card-title">{{theme.title.rendered}}</h4>
+            <div [innerHTML]="theme.acf.resumen" class="text-2-line"></div>
           </div>
           <div class="card-footer">
-            <a routerLink="/detail" class="btn btn-secondary">Demo &amp; Contacto</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 sb-preview text-center">
-        <div class="card h-100">
-          <a class="sb-preview-img" routerLink="/detail">
-            <img class="card-img-top" src="assets/img/gopro.png" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
-          </a>
-          <div class="card-body">
-            <h4 class="card-title">Go Pro</h4>
-            <p class="card-text">An app landing page theme.</p>
-          </div>
-          <div class="card-footer">
-            <a routerLink="/detail" class="btn btn-secondary">Demo &amp; Contacto</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 sb-preview text-center">
-        <div class="card h-100">
-          <a class="sb-preview-img" routerLink="/detail">
-            <img class="card-img-top" src="assets/img/gopro.png" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
-          </a>
-          <div class="card-body">
-            <h4 class="card-title">Go Pro</h4>
-            <p class="card-text">An app landing page theme.</p>
-          </div>
-          <div class="card-footer">
-            <a routerLink="/detail" class="btn btn-secondary">Demo &amp; Contacto</a>
+            <a [routerLink]="['/detail', theme.id]" class="btn btn-secondary">Demo &amp; Contacto</a>
           </div>
         </div>
       </div>

@@ -15,7 +15,8 @@ export class ListComponent {
   constructor(      
                     public http:Http
                 
-                ) {
+                ) { 
+                    window.scrollTo(0, 0);
                     this.loading = true;
                     this.http.get('https://paginaswebks.com/wp-json/wp/v2/temas')
                     .subscribe( 
