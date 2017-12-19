@@ -31,7 +31,7 @@
 <section class="themes">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 col-md-6 sb-preview text-center" *ngFor="let theme of themes">
+      <div class="col-lg-4 col-md-6 sb-preview text-center" *ngFor="let theme of themes | slice:0:6">
         <div class="card h-100">
           <a class="sb-preview-img" [routerLink]="['/detail', theme.id]">
             <img class="card-img-top" src="{{theme.acf.portada}}" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4 col-md-6 sb-preview text-center" *ngFor="let theme of (themes2); let myIndex = index">
+      <div class="col-lg-4 col-md-6 sb-preview text-center" *ngFor="let theme of themes2 | slice:0:3">
         <div class="card h-100">
           <a class="sb-preview-img" [routerLink]="['/detail', theme.id]">
             <img class="card-img-top" src="{{theme.acf.portada}}" alt="Free Bootstrap App Landing Page Theme - Start Bootstrap">
