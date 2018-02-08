@@ -18,11 +18,11 @@ export class ListComponent {
                 ) { 
                     window.scrollTo(0, 0);
                     this.loading = true;
-                    this.http.get('https://paginaswebks.com/wp-json/wp/v2/temas')
+                    this.http.get('https://paginaswebks.com/wp-json/wp/v2/temas?per_page=100')
                     .subscribe( 
                         data => {
                             this.themes = data.json();
-                            //console.log(this.themes);
+                            console.log(this.themes);
                             this.loading = false;
                         },
                         err => {

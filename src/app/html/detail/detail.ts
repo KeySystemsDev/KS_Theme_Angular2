@@ -16,12 +16,12 @@ bootstrap4Mode();
 
 export class DetailComponent {
 
-  theme:any[] = [];
+  public theme = [];
   id: number;
   private sub: any;
   public loading = false;
-  title:any[] = [];
-  acf:any[] = [];
+  public title = [];
+  public acf = [];
 
   constructor(      
                     public http:Http,
