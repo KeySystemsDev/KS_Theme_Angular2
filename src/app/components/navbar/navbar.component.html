@@ -15,6 +15,20 @@
             <a class="nav-link" href="#" title="Contacto">Contacto</a>
         </li>-->
       </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <div id="custom-search-input">
+              <div class="input-group col-md-12">
+                  <input type="text" class="form-control input-lg" [(ngModel)]="name" placeholder="Buscar">
+                  <span class="input-group-btn">
+                      <a class="btn btn-info btn-lg" (click)="onSearch(name)" [routerLink]="['/search', name]">
+                          <i class="fa fa-search"></i>
+                      </a>
+                  </span>
+              </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>

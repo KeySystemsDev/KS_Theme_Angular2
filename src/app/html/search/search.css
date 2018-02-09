@@ -1,0 +1,28 @@
+a {
+    color: #212121;
+    text-decoration: none;
+    -webkit-text-decoration-skip: objects;
+}
+header.masthead {
+    padding: 75px 0;
+    text-align: center;
+    color: #fff;
+    background-color: #09355C;
+    background-image: url(../../../assets/img/833.png);
+}
+.page-heading {
+    background-color: #09355C;
+    background-image: url(../../../assets/img/833.png);
+}
+.n-search {
+    padding: 50px 0;
+    text-align: center;
+    }
+.n-search h1{
+    color: rgba(0,0,0,0.6);
+}
+.n-search i{
+    font-size: 150px;
+    color: rgba(0,0,0,0.6);
+    padding-bottom: 20px;
+}

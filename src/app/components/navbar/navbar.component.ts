@@ -8,4 +8,16 @@ import { Component } from '@angular/core';
 
 export class NavbarComponent {
 
+ 
+    constructor(      
+                        
+                    
+                    ) { 
+
+
+                    }
+    
+    onSearch(){ 
+       location.reload();
+    }
 }

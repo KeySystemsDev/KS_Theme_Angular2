@@ -36,6 +36,8 @@ export class DetailComponent {
                       this.id = +params['id']; 
                     });
 
+                    console.log(this.id);
+
                     this.http.get('https://paginaswebks.com/wp-json/wp/v2/temas/' + this.id)
                     .subscribe( 
                         data => {

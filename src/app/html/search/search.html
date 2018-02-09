@@ -1,0 +1,56 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '0px' }"></ngx-loading>
+
+<header class="page-heading">
+  <div class="container"> 
+    <h1>Busqueda</h1>
+    <p>Encuentra el tema que necesites y disfruta de todo sus beneficios.</p>
+    <div id="carbonads">
+      <span>
+        <span class="carbon-wrap">
+          <a href="http://espublicidadcreativa.com/" class="carbon-img" target="_blank" rel="noopener">
+            <img src="assets/img/pc.png" alt="" border="0" height="100" width="130" style="max-width: 130px;">
+          </a>
+          <a class="carbon-text" target="_blank" rel="noopener">
+            No sabes como ganar dinero con tus redes sociales, entra aqui y descrubrelo!
+          </a>
+        </span>
+        <a href="http://espublicidadcreativa.com/" class="carbon-poweredby" target="_blank">Publicidad Creativa</a>
+      </span>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a routerLink="/index">Inicio</a>
+    </li>
+    <li class="breadcrumb-item active">Busqueda</li>
+  </ol>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 sb-preview text-center" *ngFor="let search of searchs">
+      <div class="card h-100">
+        <a class="sb-preview-img" [routerLink]="['/detail', search.id]">
+          <img class="card-img-top" src="{{search.acf.portada}}" alt="Free Bootstrap App Landing Page search - Start Bootstrap">
+        </a>
+        <div class="card-body">
+          <h4 class="card-title">{{search.title.rendered}}</h4>
+          <div [innerHTML]="search.acf.resumen" class="text-2-line"></div>
+        </div>
+        <div class="card-footer">
+          <a [routerLink]="['/detail', search.id]" class="btn btn-secondary">Demo &amp; Descarga</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="searchs.length == 0">
+    <div class="n-search">
+      <i class="fa fa-exclamation-triangle"></i>
+      <h1>No se ha encontro ninguna coincidencia con los Temas existentes.</h1>
+    <div>
+</div>
