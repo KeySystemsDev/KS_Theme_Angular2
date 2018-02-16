@@ -5,6 +5,8 @@ import { LoadingModule } from 'ngx-loading';
 import { ModalModule } from 'ngx-modialog';
 import { BootstrapModalModule, Modal, bootstrap4Mode } from 'ngx-modialog/plugins/bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SimpleNotificationsModule } from 'angular2-notifications';
 
 // Rutas
 import { app_routing } from "./app.routes";
@@ -19,6 +21,7 @@ import { SearchComponent } from './html/search/search';
 // Componentes
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MessageComponent } from './components/message/message';
 
 @NgModule({
   declarations: [
@@ -37,9 +40,12 @@ import { FooterComponent } from './components/footer/footer.component';
     app_routing,
     LoadingModule,
     ModalModule.forRoot(),
-    BootstrapModalModule
+    BootstrapModalModule,
+    BootstrapModalModule,
+    BrowserAnimationsModule, 
+    SimpleNotificationsModule.forRoot()
   ],
-  providers: [],
+  providers: [MessageComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

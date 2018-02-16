@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 
+import { MessageComponent } from '../../components/message/message';
+
 @Component({
   selector: 'app-index',
   templateUrl: './index.html',
@@ -16,7 +18,9 @@ export class IndexComponent {
 
     constructor(
 
-        public http:Http
+        public http:Http,
+        public MessageComponentCtrl:MessageComponent,
+
 
     ) {   
             window.scrollTo(0, 0);
@@ -31,7 +35,9 @@ export class IndexComponent {
               err => {
                   console.log(err);
                   this.loading = false;
+                  this.MessageComponentCtrl.menssageError();
               });  
       }
+
      
 }
