@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 
+import { MessageComponent } from '../../components/message/message';
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.html',
@@ -13,7 +15,8 @@ export class ListComponent {
   public loading = false;
 
   constructor(      
-                    public http:Http
+                    public http:Http,
+                    public MessageComponentCtrl:MessageComponent,
                 
                 ) { 
                     window.scrollTo(0, 0);
@@ -28,6 +31,7 @@ export class ListComponent {
                         err => {
                             console.log(err);
                             this.loading = false;
+                            this.MessageComponentCtrl.menssageError();
                         });  
 
                    

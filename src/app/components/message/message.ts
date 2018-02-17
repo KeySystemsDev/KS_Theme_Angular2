@@ -11,6 +11,6 @@ export class MessageComponent {
     ) { }
 
     menssageError() {
-            this.service.error('Error', 'Lo sentimos ocurrio un error de conexión.');
+            this.service.error('Error', 'Lo sentimos ocurrio un error de conexión, por favor recarge la Página web.');
         }
 }

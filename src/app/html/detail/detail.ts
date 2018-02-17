@@ -5,6 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Overlay } from 'ngx-modialog';
 import { Modal, bootstrap4Mode } from 'ngx-modialog/plugins/bootstrap';
 
+import { MessageComponent } from '../../components/message/message';
+
 // run the plugin to work with version 4 of bootstrap
 bootstrap4Mode();
 
@@ -26,7 +28,8 @@ export class DetailComponent {
   constructor(      
                     public http:Http,
                     private route: ActivatedRoute,
-                    public modal: Modal
+                    public modal: Modal,
+                    public MessageComponentCtrl:MessageComponent,
                 
                 ) { 
                     window.scrollTo(0, 0);
@@ -52,6 +55,7 @@ export class DetailComponent {
                         err => {
                             console.log(err);
                             this.loading = false;
+                            this.MessageComponentCtrl.menssageError();
                         });  
 
                    

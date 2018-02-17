@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
 
+import { MessageComponent } from '../../components/message/message';
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.html',
@@ -18,7 +20,8 @@ export class SearchComponent {
 
   constructor(      
                     public http:Http,
-                    private route: ActivatedRoute
+                    private route: ActivatedRoute,
+                    public MessageComponentCtrl:MessageComponent,
                 
                 ) { 
                     window.scrollTo(0, 0);
@@ -38,6 +41,7 @@ export class SearchComponent {
                         err => {
                             console.log(err);
                             this.loading = false;
+                            this.MessageComponentCtrl.menssageError();
                         });  
 
                    
