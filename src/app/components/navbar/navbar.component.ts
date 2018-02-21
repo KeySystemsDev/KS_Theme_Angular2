@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { SearchComponent } from '../../html/search/search';
 
 @Component({
     moduleId: module.id,
@@ -9,7 +12,7 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
 
  
-    constructor(      
+    constructor(      private router: Router
                         
                     
                     ) { 
@@ -17,7 +20,8 @@ export class NavbarComponent {
 
                     }
     
-    onSearch(){ 
-       location.reload();
+    onSearch(name){ 
+        this.router.navigate(['/search', name]);
+        location.reload();    
     }
 }

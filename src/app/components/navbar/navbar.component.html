@@ -19,7 +19,7 @@
         <li class="nav-item">
           <div id="custom-search-input">
               <div class="input-group col-md-12">
-                  <input type="text" class="form-control input-lg" [(ngModel)]="name" placeholder="Buscar">
+                  <input type="text" class="form-control input-lg" [(ngModel)]="name" placeholder="Buscar" (keyup.enter)="onSearch(name)">
                   <span class="input-group-btn">
                       <a class="btn btn-info btn-lg" (click)="onSearch(name)" [routerLink]="['/search', name]">
                           <i class="fa fa-search"></i>
