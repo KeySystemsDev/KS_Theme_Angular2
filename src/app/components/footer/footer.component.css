@@ -4,3 +4,9 @@ footer .footer-mailchimp {
     background-color: #09355C;
     background-image: url(../../../assets/img/833.png);
 }
+.social-instagram{
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    transition: all 0.2s ease-in-out;
+    border-radius: 100%;
+}
